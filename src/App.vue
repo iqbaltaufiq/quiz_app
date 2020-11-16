@@ -1,10 +1,12 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <!-- <router-link to="/">Home</router-link> |
+      <router-link to="/about">How to Play</router-link> |
+      <router-link to="/quiz">Quiz</router-link> -->
     </div>
     <router-view/>
+    <p class="mt-5 text-center">&copy; 2020 | Created with love by <a href="https://github.com/iqbaltaufiq">Iqbal Taufiq</a> | Powered by <a href="https://vuejs.org">Vue</a></p>
   </div>
 </template>
 
