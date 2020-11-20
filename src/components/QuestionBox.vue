@@ -43,12 +43,20 @@ export default {
   },
   methods: {
     shuffleAnswers () {
+      // shuffle the choice answers from each questions (lodash required)
       const choices = [...this.question.incorrect, this.question.correct]
       this.choices = _.shuffle(choices)
+
+      // get the index of the correct answer to be checked later
       this.correctIndex = this.choices.indexOf(this.question.correct)
       return choices
     },
     answer (answer, index) {
+      /**
+       * method to check the answer chosen by user
+       * if the user's answer matched the correct answer
+       * then increment the score and set the answered status
+       */
       if (answer === this.question.correct && !this.isAnswered) {
         this.score += 10
         this.getScore(this.score)
@@ -58,6 +66,11 @@ export default {
       this.chosenIndex = index
     },
     answerClass (index) {
+      /**
+       * set the class for the answer-box.
+       * green background for correct answer,
+       * red background for wrong answer
+       */
       let answerClass = ''
       if (this.isAnswered && this.correctIndex === index) answerClass = 'correct'
       else if (this.isAnswered && this.chosenIndex === index && this.correctIndex !== index) answerClass = 'incorrect'
@@ -68,6 +81,7 @@ export default {
     question: {
       immediate: true,
       handler () {
+        // reset the state whenever the question changes
         this.chosenIndex = null
         this.isAnswered = false
         this.hasAnswered(this.isAnswered)

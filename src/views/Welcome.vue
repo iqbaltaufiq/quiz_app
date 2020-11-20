@@ -4,7 +4,7 @@
       <b-row>
         <b-col>
           <div class="box">
-            <div class="textBox">
+            <div class="textBox neon">
               <h1>INDOQUIZ</h1>
               <hr class="border-white" width="15%">
               <p>Selamat datang di Indoquiz!
@@ -33,7 +33,6 @@ export default {
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0px 0px 8px rgba(20, 20, 20, 0.5);
-  /* background-color: slateblue; */
 }
 .textBox {
   border: 16px double darkturquoise;
@@ -46,5 +45,20 @@ export default {
 }
 .textBox:hover {
   background: rgba(20, 20, 20, 0.7);
+}
+.neon {
+  animation: neon 2s linear 0s infinite;
+}
+@keyframes neon {
+  0% {
+    border-color: cyan;
+  }
+  50% {
+    border-color: teal;
+  }
+  100% {
+    border-color: cyan;
+  }
+
 }
 </style>
