@@ -10,6 +10,24 @@ The code is written in english, but the quiz' question and answers are in **Indo
 
 Long story short, if you know an old quiz named **_Who wants to be a millionaire_**, then this is very similar to it.
 
+## Getting started
+```bash
+# clone the project
+git clone https://github.com/iqbaltaufiq/quiz_app.git
+
+# enter the project directory
+cd quiz_app
+
+# install dependencies
+npm install
+
+# run in development mode
+npm run serve
+
+# open browser and enter the address
+http://localhost:8080
+```
+
 ## Tech Used
 - HTML, CSS, JS
 - [Vue 3](https://vuejs.org) (CLI with Babel & ESLint standard)
